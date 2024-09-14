@@ -10,7 +10,7 @@ def imgprocess(imgobj):
     npy_img_inv = npy.array(imgobj)
     img_bgr = cv2.cvtColor(npy_img_inv, cv2.COLOR_RGB2BGR)
     img_gray = cv2.cvtColor(img_bgr,cv2.COLOR_BGR2GRAY)
-    ret, img_binary = cv2.threshold(img_gray,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU) 
+    img_binary = cv2.adaptiveThreshold(img_gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY_INV,7,17) 
     img_contours,img_hierarchy = cv2.findContours(img_binary,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
     img_cont=cv2.drawContours(img_bgr, img_contours, -1, (0,0,255), thickness=1,lineType=cv2.LINE_AA,hierarchy= img_hierarchy )
     img_cont_PIL = Image.fromarray(cv2.cvtColor(img_cont,cv2.COLOR_BGR2RGB))
