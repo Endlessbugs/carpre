@@ -50,8 +50,8 @@ def imgpre(imgname,imgfolder_abspath,savefolder_abspath):
     #img_inv = imgOps.invert(img)
     img_bin.show()
     img_cont.show()
-    imgsave(img_cont,imgname,'tiff',savefolder_abspath)
-    imgsave(img_bin,imgname,'tiff',savefolder_abspath)
+    imgsave(img_cont,imgname+'_cont','tiff',savefolder_abspath)
+    imgsave(img_bin,imgname+'_bin','tiff',savefolder_abspath)
     img.close
     return img_cont,img_gray,img_bin
     
