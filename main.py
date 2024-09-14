@@ -15,8 +15,8 @@ savefolder_abspath = os.path.join(workingdir,savefolder_name)
 
 
 
-#imgpre(img1name,imgfolder_abspath,savefolder_abspath)
-img_cont,img_gray,img_bin = imgpre(img2name,imgfolder_abspath,savefolder_abspath)
-#imgpre(img3name,imgfolder_abspath,savefolder_abspath)
-#imgpre(img4name,imgfolder_abspath,savefolder_abspath)
-#img4_gray.show()
+imgpre(img1name,imgfolder_abspath,savefolder_abspath)
+imgpre(img2name,imgfolder_abspath,savefolder_abspath)
+imgpre(img3name,imgfolder_abspath,savefolder_abspath)
+imgpre(img4name,imgfolder_abspath,savefolder_abspath)
+
